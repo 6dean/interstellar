@@ -8,11 +8,12 @@ import {
   Platform,
   SafeAreaView,
   Button,
-  TouchableOpacity,
 } from "react-native";
 import Constants from "expo-constants";
+import stylesheet from "./stylesheet";
+import styletext from "./stylesheet2";
 
-// TouchableOpacity A LA PLACE DE BUTTON
+console.log(stylesheet.container);
 
 export default function App() {
   return (
@@ -46,15 +47,13 @@ export default function App() {
 
           {/* -------------------BLOCK INTERSTELLAR------------------- */}
 
-          <View style={stylesNum2.container}>
-            <Text style={stylesFonts.title}>Interstellar</Text>
+          <View style={stylesheet.container}>
+            <Text style={styletext.title}>Interstellar</Text>
             <View style={{ flexDirection: "row" }}>
-              <Text style={stylesFonts.subtitles}>2014</Text>
-              <Text style={stylesFonts.subtitles}>PG-13</Text>
-              <Text style={stylesFonts.subtitles}>2H 49min</Text>
-              <Text style={stylesFonts.subtitles}>
-                Adventure, Drama, Sci-Fi
-              </Text>
+              <Text style={styletext.subtitles}>2014</Text>
+              <Text style={styletext.subtitles}>PG-13</Text>
+              <Text style={styletext.subtitles}>2H 49min</Text>
+              <Text style={styletext.subtitles}>Adventure, Drama, Sci-Fi</Text>
             </View>
             <View style={{ flexDirection: "row" }}>
               <Image
@@ -67,7 +66,7 @@ export default function App() {
                 }}
               />
               <View style={{ alignItems: "center" }}>
-                <Text style={stylesFonts.infos}>
+                <Text style={styletext.infos}>
                   A team of explorers travel through a wormhole in space in an
                   attempt to ensure humanity's survival.
                 </Text>
@@ -92,7 +91,7 @@ export default function App() {
                 }}
               >
                 <Image source={require("./assets/star.png")} />
-                <Text style={stylesFonts.textcom}>8.6/10</Text>
+                <Text style={styletext.textcom}>8.6/10</Text>
               </View>
 
               <View
@@ -104,7 +103,7 @@ export default function App() {
                 }}
               >
                 <Image source={require("./assets/blackstar.png")} />
-                <Text style={stylesFonts.textcom}>RATE THIS</Text>
+                <Text style={styletext.textcom}>RATE THIS</Text>
               </View>
               <View
                 style={{
@@ -115,13 +114,13 @@ export default function App() {
                 }}
               >
                 <Text style={{ backgroundColor: "green" }}>74</Text>
-                <Text style={stylesFonts.textcom}>METASCORE</Text>
+                <Text style={styletext.textcom}>METASCORE</Text>
               </View>
             </View>
           </View>
 
           {/* -------------------BLOCK ACTORS------------------- */}
-          <View style={styles.container2}>
+          <View style={stylesheet.container2}>
             <View
               style={{
                 flexDirection: "row",
@@ -130,14 +129,14 @@ export default function App() {
                 marginRight: 10,
               }}
             >
-              <Text style={stylesFonts.topbilled}>Top Billed Cast</Text>
+              <Text style={styletext.topbilled}>Top Billed Cast</Text>
               <Button title="SEE ALL" />
             </View>
 
             {/* -------------------PHOTOS ACTORS------------------- */}
             <ScrollView horizontal={true}>
               <View style={{ flexDirection: "row", marginLeft: 10 }}>
-                <View style={styles.container3} backgroundColor="#2A2A2A">
+                <View style={stylesheet.container3} backgroundColor="#2A2A2A">
                   <Image
                     source={require("./assets/matthew.jpg")}
                     style={{ width: 140, height: 220 }}
@@ -146,13 +145,13 @@ export default function App() {
                   <Text
                     ellipsizeMode="tail"
                     numberOfLines={1}
-                    style={stylesFonts.actortext}
+                    style={styletext.actortext}
                   >
                     Matthew McConaughey
                   </Text>
-                  <Text style={stylesFonts.actorrole}>Cooper</Text>
+                  <Text style={styletext.actorrole}>Cooper</Text>
                 </View>
-                <View style={styles.container3} backgroundColor="#2A2A2A">
+                <View style={stylesheet.container3} backgroundColor="#2A2A2A">
                   <Image
                     source={require("./assets/anne.jpg")}
                     style={{ width: 140, height: 220 }}
@@ -161,22 +160,22 @@ export default function App() {
                   <Text
                     ellipsizeMode="tail"
                     numberOfLines={1}
-                    style={stylesFonts.actortext}
+                    style={styletext.actortext}
                   >
                     Anne Hathaway
                   </Text>
-                  <Text style={stylesFonts.actorrole}>Brand</Text>
+                  <Text style={styletext.actorrole}>Brand</Text>
                 </View>
-                <View style={styles.container3} backgroundColor="#2A2A2A">
+                <View style={stylesheet.container3} backgroundColor="#2A2A2A">
                   <Image
                     source={require("./assets/jessica.jpg")}
                     style={{ width: 140, height: 220 }}
                     resizeMode="cover"
                   />
-                  <Text style={stylesFonts.actortext}>Jessica Chastain</Text>
-                  <Text style={stylesFonts.actorrole}>Murph</Text>
+                  <Text style={styletext.actortext}>Jessica Chastain</Text>
+                  <Text style={styletext.actorrole}>Murph</Text>
                 </View>
-                <View style={styles.container3} backgroundColor="#2A2A2A">
+                <View style={stylesheet.container3} backgroundColor="#2A2A2A">
                   <Image
                     source={require("./assets/mackenzie.jpg")}
                     style={{ width: 140, height: 220 }}
@@ -185,21 +184,21 @@ export default function App() {
                   <Text
                     ellipsizeMode="tail"
                     numberOfLines={1}
-                    style={stylesFonts.actortext}
+                    style={styletext.actortext}
                   >
                     Mackenzie Foy
                   </Text>
-                  <Text style={stylesFonts.actorrole}>Murph</Text>
+                  <Text style={styletext.actorrole}>Murph</Text>
                 </View>
               </View>
             </ScrollView>
             {/* -------------------REALISATORS ------------------- */}
 
             <View style={{ marginLeft: 10 }}>
-              <Text style={stylesFonts.director}>Director</Text>
-              <Text style={stylesFonts.infosdir}>Christopher Nolan</Text>
-              <Text style={stylesFonts.director}>Writers</Text>
-              <Text style={stylesFonts.infosdir}>
+              <Text style={styletext.director}>Director</Text>
+              <Text style={styletext.infosdir}>Christopher Nolan</Text>
+              <Text style={styletext.director}>Writers</Text>
+              <Text style={styletext.infosdir}>
                 Jonathan Nolan (written by) and Christopher Nolan (written by)
               </Text>
             </View>
@@ -209,85 +208,3 @@ export default function App() {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { backgroundColor: "red" },
-  container2: {
-    backgroundColor: "#212121",
-    marginTop: 20,
-  },
-  container3: {
-    justifyContent: "flex-start",
-    marginRight: 8,
-    width: 140,
-  },
-  card: { maxHeight: 200, maxWidth: 160 },
-  image: { resizeMode: "contain" },
-});
-
-const stylesFonts = StyleSheet.create({
-  baseText: {
-    fontWeight: "bold",
-  },
-  title: {
-    marginTop: 10,
-    color: "white",
-    fontSize: 33,
-    marginLeft: 10,
-  },
-  infos: {
-    color: "white",
-    marginTop: 20,
-    marginBottom: 20,
-    marginLeft: 15,
-    width: 240,
-  },
-  topbilled: {
-    marginTop: 15,
-    marginBottom: 15,
-    color: "white",
-    fontSize: 25,
-    marginLeft: 10,
-  },
-  actortext: {
-    padding: 2,
-    marginTop: 5,
-    color: "white",
-    ellipsizeMode: "tail",
-  },
-  actorrole: {
-    padding: 2,
-    color: "lightgrey",
-    fontSize: 12,
-    marginBottom: 8,
-  },
-  director: {
-    color: "white",
-    marginTop: 16,
-    fontSize: 17,
-  },
-  infosdir: {
-    padding: 2,
-    color: "lightgrey",
-    fontSize: 13,
-    marginTop: 6,
-    marginBottom: 6,
-  },
-  subtitles: {
-    color: "grey",
-    marginLeft: 10,
-    marginTop: 10,
-    fontSize: 14,
-    justifyContent: "flex-start",
-  },
-  textcom: {
-    fontWeight: "bold",
-    color: "white",
-  },
-});
-
-const stylesNum2 = StyleSheet.create({
-  container: {
-    backgroundColor: "#212121",
-  },
-});
