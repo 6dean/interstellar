@@ -1,6 +1,5 @@
 import { StatusBar } from "expo-status-bar";
 import {
-  StyleSheet,
   Text,
   View,
   ScrollView,
@@ -12,8 +11,6 @@ import {
 import Constants from "expo-constants";
 import stylesheet from "./stylesheet";
 import styletext from "./stylesheet2";
-
-console.log(stylesheet.container);
 
 export default function App() {
   return (
