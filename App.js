@@ -110,7 +110,7 @@ export default function App() {
                   padding: 15,
                 }}
               >
-                <Text style={{ backgroundColor: "green" }}>74</Text>
+                <Text style={{ backgroundColor: "#61C74F" }}>74</Text>
                 <Text style={styletext.textcom}>METASCORE</Text>
               </View>
             </View>
